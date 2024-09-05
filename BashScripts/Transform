@@ -1,0 +1,29 @@
+#!/bin/bash
+#Path = chioma.eboaju@DESKTOP-RGNPOEM MINGW64 ~/Desktop/CDEBootcamp/Linux/GitAssignment
+
+# Set environment variables
+CSV_URL="https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2023-financial-year-provisional/Download-data/annual-enterprise-survey-2023-financial-year-provisional.csv"
+RAW_DIR="raw"
+TRANSFORMED_DIR="Transformed"
+GOLD_DIR="Gold"
+TRANSFORMED_FILE="2023_year_finance.csv"
+
+# Step 2: Transform - Rename the column and select specific columns
+echo "Transforming data..."
+
+# Create the transformed directory if it doesn't exist
+mkdir -p "$TRANSFORMED_DIR"
+echo "Transformed folder created"
+
+# Use awk to rename the column and select specific columns
+awk -F, 'NR==1 {for (i=1; i<=NF; i++) if ($i == "Variable_code") $i = "variable_code"} 
+         {print $1","$9","$5","$6}' "$RAW_DIR/$FILE_NAME" > "$TRANSFORMED_DIR/$TRANSFORMED_FILE"
+echo "file named 2023_year_finance.csv saved into the Transformed folder"
+
+# Confirm the file was saved in the transformed directory
+if [ -f "$TRANSFORMED_DIR/$TRANSFORMED_FILE" ]; then
+    echo "Data successfully transformed and saved in $TRANSFORMED_DIR/$TRANSFORMED_FILE."
+else
+    echo "Data transformation failed."
+    exit 1
+fi
