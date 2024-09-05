@@ -4,9 +4,6 @@
 # Set environment variables
 CSV_URL="https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2023-financial-year-provisional/Download-data/annual-enterprise-survey-2023-financial-year-provisional.csv"
 RAW_DIR="raw"
-TRANSFORMED_DIR="Transformed"
-GOLD_DIR="Gold"
-TRANSFORMED_FILE="2023_year_finance.csv"
 
 # Step 1: Extract - Download the CSV file and save it in the raw directory
 echo "Starting ETL process..."
