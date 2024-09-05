@@ -8,8 +8,8 @@ This project handles both the extraction, transformation, and loading (ETL) of f
 Directory Structure
 ├── Scripts/
 │   ├── Bash/
+|   ├── ETL_pipeline_diagram.png/
 │   ├── SQL/
-│   ├── ETL_pipeline_diagram.png
 
 Bash Script: ETL Process
 The Bash script performs the following ETL operations:
