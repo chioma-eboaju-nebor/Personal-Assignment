@@ -1,0 +1,5 @@
+/* Query 3: Company names starting with 'C' or 'W' where primary contact contains 'ana' or 'Ana' but not 'eana' */
+SELECT company_name
+FROM parch_posey_data
+WHERE (company_name LIKE 'C%' OR company_name LIKE 'W%')
+AND (primary_contact ILIKE '%ana%' AND primary_contact NOT ILIKE '%eana%');

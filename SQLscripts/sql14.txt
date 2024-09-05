@@ -1,0 +1,4 @@
+/* Query 4: Table showing region, sales rep, and account name, sorted alphabetically by account name */
+SELECT region, sales_rep, company_name AS account_name
+FROM parch_posey_data
+ORDER BY company_name ASC;

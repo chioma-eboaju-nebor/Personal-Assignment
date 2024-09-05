@@ -1,0 +1,4 @@
+/* Query 1: List of order IDs where either gloss_qty or poster_qty is greater than 4000 */
+SELECT id
+FROM parch_posey_data
+WHERE gloss_qty > 4000 OR poster_qty > 4000;
