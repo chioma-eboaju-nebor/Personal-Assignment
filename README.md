@@ -1,4 +1,4 @@
-CoreDataEngineers ETL and Competitor Analysis
+CoreDataEngineer ETL and Competitor Analysis
 
 This repository contains scripts that perform an ETL process and answer specific business questions about Parch and Posey using SQL queries. The solutions are divided into two main sections: Bash scripts and SQL queries.
 
